@@ -23,7 +23,7 @@ Au lancement de votre raspberry, une fois l'étape initiale passée, ouvrez un t
 
 Lancez les mises à jour : `sudo apt update` puis `sudo apt upgrade`.
 
-> [!INFO]
+> [!NOTE]
 > `sudo` permet de demander une dérogation au superuser (root) pour réaliser une opération.
 
 ### Terminal
