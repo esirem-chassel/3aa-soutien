@@ -1,3 +1,56 @@
 # TP 1 : Linux, shell, SSH
 
+## Installation physique
+
+> [!WARNING]
+> Assurez-vous bien que la carte SD soit bien insérée avant de le brancher votre Raspberry !
+
+Connectez votre Raspberry : écran, clavier, souris et alimentation.
+A la première connexion, vous devrez sélectionner plusieurs paramètres initiaux, parmi :
+- le nom d'utilisateur (utilisez le nom de votre groupe) et mot de passe (conservez-le bien !!)
+- la configuration de la langue et TZ (sélectionnez Europe/Paris et France)
+- la configuration du clavier (testez votre clavier pour cela)
+- la connexion Wi-Fi (passez cette étape)
+- les mises à jour (passez également cette étape)
+
+Connectez ensuite le câble à paires torsadées à connectique RJ45 pour protocole Ethernet (le câble Ethernet en gros) pour relier votre Pi au réseau.
+
+## Démarrage 
+
+Au lancement de votre raspberry, une fois l'étape initiale passée, ouvrez un terminal.
+
+### Mises à jour
+
+Lancez les mises à jour : `sudo apt update` puis `sudo apt upgrade`.
+
+> [!INFO]
+> `sudo` permet de demander une dérogation au superuser (root) pour réaliser une opération.
+
+### Terminal
+
+Observez votre ligne de commandes.
+Celle-ci vous donne déjà quelques informations, car la partie gauche est systématiquement sous la forme : `<username>@<host>:<path><mode>`.
+`<username>` est le nom d'utilisateur, `<host>` est le nom d'hôte, `<path>` est le chemin actuellement parcouru et `<mode>` est le mode actuel d'édition (`$` par exemple).
+
+### Exploration
+
+Utilisez cd pour vous déplacer dans le dossier `Documents` : `cd Documents`. Que constatez-vous dans votre ligne de commandes ?
+
+La commande `pwd` affiche votre répertoire de travail (actuellement parcouru). Testez cette commande. Qu'obtenez-vous ?
+
+Pour se "déplacer" dans le dossier parent, on peut faire un `cd ..`, la suite de caractères `..` permettant, en Unix/Linux, de désigner le dossier parent. Le caractère seul `.` permet de désigner le dossier courant.
+
+Que ferait donc `cd .` ?
+
+Déplacez-vous dans `/tmp` et effectuez un `pwd`. Que constatez-vous ?
+
+Le système hiérarchique des systèmes X se base sur une racine `/`.
+Quand le premier caractère d'un chemin est un `/`, cela signifie qu'on "part" de la racine du système.
+Quand les premiers caractères d'un chemin sont `./` cela signifie qu'on "part" du dossier courant.
+
+Cela signifie que `/home/pi/../test/./Images` est identique à `/home/test/Images`.
+
+Il existe d'autres caractères spéciaux, notemment `~` désignant le dossier "home" de l'utilisateur actuellement connecté.
+
+### Listing et propriétés
 
