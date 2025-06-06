@@ -36,6 +36,9 @@ Celle-ci vous donne déjà quelques informations, car la partie gauche est syst�
 
 Utilisez cd pour vous déplacer dans le dossier `Documents` : `cd Documents`. Que constatez-vous dans votre ligne de commandes ?
 
+> [!TIP]
+> On dit que `Documents` est l'argument donné à la commande `cd`
+
 La commande `pwd` affiche votre répertoire de travail (actuellement parcouru). Testez cette commande. Qu'obtenez-vous ?
 
 Pour se "déplacer" dans le dossier parent, on peut faire un `cd ..`, la suite de caractères `..` permettant, en Unix/Linux, de désigner le dossier parent. Le caractère seul `.` permet de désigner le dossier courant.
@@ -52,5 +55,102 @@ Cela signifie que `/home/pi/../test/./Images` est identique à `/home/test/Image
 
 Il existe d'autres caractères spéciaux, notemment `~` désignant le dossier "home" de l'utilisateur actuellement connecté.
 
-### Listing et propriétés
+Déplacez-vous dans votre dossier utilisateur, soit via `cd` soit via `cd ~`.
+
+
+### Listing et propriétés (bases)
+
+Dans votre dossier utilisateur, effectuez un `ls`. Cette commande permet de lister les fichiers et dossiers.
+D'après vous, quels éléments sont des fichiers ? Quels éléments sont des dossiers ?
+
+L'argument derrière `ls` permet d'indiquer le chemin à "explorer".
+
+La commande ls peut prendre un grand nombre d'options. Effectuez un `man ls` pour afficher l'aide sur la commande `ls`.
+
+> [!TIP]
+> Cette aide utilise un lecteur identique à celui de la commande `less`.
+> Ce lecteur permet la recherche (en tapant `/` suivi de la chaîne de recherche souhaitée),
+> le défilement lent (avec les flèches directionnelles), le défilement de pages (avec espace ou encore les doubles flèches)...
+> Pour quitter ce lecteur, appuyez simplement sur `q`. Une aide complète est disponible en appuyant simplement sur `h` dans le lecteur.
+
+Par exemple, `ls -a` permet de lister tous les fichiers et dossiers, y compris ceux cachés (commençant par un point), y compris `.` (dossier courant) et `..` (dossier parent).
+La commande `ls -lt` liste les fichiers et dossiers, triés par date de modification, sous un format liste un peu plus lisible.
+
+Quelle est la taille du fichier `.bashrc` ?
+
+Testez la commande `ls -hlt`. Que constatez-vous ? Comment obtiendirez-vous cette même liste en incluant les fichiers et dossiers cachés ?
+
+L'option `-l` permet notemment de voir différentes informations quant aux fichiers et dossiers:
+- les attributs ou flags
+- le nombre d'éléments contenus
+- le propriétaire
+- le groupe
+- la taille
+- la date de modification
+- le nom (et possiblement la cible - nous verrons ça plus tard)
+
+Nous allons nous intéresser aux attributs.
+Le premier attribut indique le type d'élément; par exemple `d` est un dossier (`d`irectory), `l` un lien symbolique (sym`l`ink), alors que `-` indique un fichier.
+Les neufs attributs suivants indiquent les droits affectés au propriétaire (trois caractères), au groupe (trois caractères) et à tous les utilisateurs (trois caractères).
+Chaque groupe de trois attributs de droits est composé de flags : `rwx`. Le première caractère (ou flag) indique le droit de lecture, le deuxième le droit d'écriture et le troisième le droit d'exécution.
+Par exemple, `r-x` indique que nous pouvons lire et exécuter le fichier, mais pas écrire dedans.
+
+Quels sont les droits du fichier `.bashrc` ? Ceux du dossier `Images` ?
+
+Quels sont les droits du dossier `/tmp` ?
+
+### Edition
+
+Créez un fichier vide via touch : `touch test.txt`.
+Editez ensuite ce fichier via nano : `nano test.txt` afin d'y ajouter une phrase, votre slogan, un principe de vie ou peu importe.
+
+> [!Info]
+> Nano est l'éditeur en ligne de commande le plus basique à disposition dans la plupart des installations X.
+> Il fonctionne grâce à des raccourcis claviers basés sur la touche `CTRL` (indiqué sous le caractère `^`) indiqués en base d'interface.
+
+Sauvegardez votre fichier et quittez nano.
+
+Créez un nouveau dossier `edir` : `mkdir edir`.
+
+Maintenant, nous allons déplacer notre fichier `test.txt` vers le dossier `edir`, via la commande `mv`.
+Commencez à saisir la commande (ne la validez pas de suite !) : `mv test.txt ./ed` puis appuyez sur la touche `TAB` de votre clavier (la tabulation).
+La commande se complète automatiquement. Validez.
+
+> [!TIP]
+> La tabulation est un des outils les plus puissants et simples à la fois de ces systèmes.
+> Un appui sur tabulation va compléter commandes et chemins de fichiers.
+> Si plusieurs choix sont possibles, un double tab va faire apparaître la liste des choix.
+> Utilisez la tabulation pour complétez vos commandes.
+
+Nous allons désormais créer une copie de notre fichier `test.txt`.
+Déplacez-vous dans le dossier `edir` et effectuez un `cp test.txt test.txt.bck`.
+Vérifiez vos opérations via `ls`.
+
+### Bash history
+
+Appuyez sur la touche directionnelle haut de votre clavier, dans le terminal. Que constatez-vous ?
+
+Ouvrez le fichier `~/.bash_history`. Qu'en déduisez-vous ?
+
+La recherche dans l'historique peut également se faire via l'appui sur `Ctrl+R`, qui attend ensuite une chaîne pour recherche la commande dans l'historique.
+
+### Création et gestion des utilisateurs
+
+Deux commandes existent pour créer des utilisateurs :
+- useradd crée un utilisateur
+- adduser démarre un assistant afin de créer un utilisateur
+
+La première commande est "brute" et permet la personnalisation via des options (donc est très complète), alors que la seconde, plus simple, permet de créer un utilisateur classique.
+
+Utilisez `adduser` afin de créer un nouvel utilisateur "test". Que se passe-t-il ?
+
+Ce genre de commandes nécessite en effet une élévation de privilèges : d'être superuser ou root. Deux solutions s'offrent à nous :
+- basculer en `root` via `su`
+- demander à effectuer cette commande en tant que `root` via `sudo`
+
+Effectuez donc un `sudo adduser test`. Notez bien son mot de passe !
+
+Listez les fichiers et dossiers du dossier `/home`. Que constatez-vous ?
+
+Pouvez-vous lister les fichiers et dossiers dans `/home/test` ? Pourquoi ?
 
