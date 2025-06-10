@@ -172,7 +172,7 @@ Les fichiers de configuration du démon (la tâche de fond qui garde le serveur 
 
 Jusqu'ici vous avez testé la connexion par clef SSH. Nous allons maintenant générer et utiliser des clefs SSH. Sur votre client, génerez une paire de clefs via la commande `ssh-keygen`.
 
-> [!INFO]
+> [!NOTE]
 > SSH utilise des clefs asymétriques, via une paire de clefs : une privée et une publique.
 > La clef privée est utilisée pour chiffrer et est garante de l'intégrité. Elle ne doit __**JAMAIS**__ être communiquée.
 
