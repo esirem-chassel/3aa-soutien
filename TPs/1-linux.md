@@ -32,6 +32,8 @@ Observez votre ligne de commandes.
 Celle-ci vous donne déjà quelques informations, car la partie gauche est systématiquement sous la forme : `<username>@<host>:<path><mode>`.
 `<username>` est le nom d'utilisateur, `<host>` est le nom d'hôte, `<path>` est le chemin actuellement parcouru et `<mode>` est le mode actuel d'édition (`$` par exemple).
 
+## Bash
+
 ### Exploration
 
 Utilisez cd pour vous déplacer dans le dossier `Documents` : `cd Documents`. Que constatez-vous dans votre ligne de commandes ?
@@ -154,7 +156,9 @@ Listez les fichiers et dossiers du dossier `/home`. Que constatez-vous ?
 
 Pouvez-vous lister les fichiers et dossiers dans `/home/test` ? Pourquoi ?
 
-### SSH
+## SSH
+
+### Connexion
 
 SSH est un protocole de sécurisation d'accès distance. Il permet la connexion distante à une machine, mais aussi l'empaquetage d'autres protocoles dans son propre protocole de communication.
 Il existe plusieurs modes de connexion SSH :
@@ -170,7 +174,9 @@ Testez votre connexion SSH depuis votre client (qui peut être un poste de trava
 
 Les fichiers de configuration du démon (la tâche de fond qui garde le serveur "vivant") SSH se situe dans le dossier `/etc/sshd`. En parcourant ces fichiers, modifiez le port d'écoute SSH, par défaut à 22, vers un autre port moins évident (au-dessus du port 2048). Testez votre modification.
 
-Jusqu'ici vous avez testé la connexion par clef SSH. Nous allons maintenant générer et utiliser des clefs SSH. Sur votre client, génerez une paire de clefs via la commande `ssh-keygen`.
+### Clefs SSH
+
+Jusqu'ici vous avez testé la connexion par mot de passe. Nous allons maintenant générer et utiliser des clefs SSH. Sur votre client, génerez une paire de clefs via la commande `ssh-keygen`.
 
 > [!NOTE]
 > SSH utilise des clefs asymétriques, via une paire de clefs : une privée et une publique.
