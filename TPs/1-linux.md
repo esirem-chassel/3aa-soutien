@@ -154,3 +154,30 @@ Listez les fichiers et dossiers du dossier `/home`. Que constatez-vous ?
 
 Pouvez-vous lister les fichiers et dossiers dans `/home/test` ? Pourquoi ?
 
+### SSH
+
+SSH est un protocole de sécurisation d'accès distance. Il permet la connexion distante à une machine, mais aussi l'empaquetage d'autres protocoles dans son propre protocole de communication.
+Il existe plusieurs modes de connexion SSH :
+- par hôte certifié
+- par mot de passe
+- par clef
+
+SSH étant un protocole client / serveur, on parle d'un client SSH qui se connecte à un serveur SSH. Pour vous connecter sur un serveur SSH, ce serveur doit "tourner" et le port associé (généralement le 22) doit être accessible.
+
+Sur le poste faisant office de **serveur** SSH, activez le service. Raspbian rend ça aisé, via un bouton dans le menu de configuration de Raspberry PI, onglet Interfaces. Assurez-vous bien de valider et fermer la fenêtre.
+
+Testez votre connexion SSH depuis votre client (qui peut être un poste de travail sous Windows ou Linux ou encore un autre Raspberry) : `ssh <user>@<ip>` (en remplaçant évidemment `<user>` par le nom d'utilisateur à utiliser et `<ip>` par l'adresse IP du serveur).
+
+Les fichiers de configuration du démon (la tâche de fond qui garde le serveur "vivant") SSH se situe dans le dossier `/etc/sshd`. En parcourant ces fichiers, modifiez le port d'écoute SSH, par défaut à 22, vers un autre port moins évident (au-dessus du port 2048). Testez votre modification.
+
+Jusqu'ici vous avez testé la connexion par clef SSH. Nous allons maintenant générer et utiliser des clefs SSH. Sur votre client, génerez une paire de clefs via la commande `ssh-keygen`.
+
+> [!INFO]
+> SSH utilise des clefs asymétriques, via une paire de clefs : une privée et une publique.
+> La clef privée est utilisée pour chiffrer et est garante de l'intégrité. Elle ne doit __**JAMAIS**__ être communiquée.
+
+Enfin, envoyez votre clef publique vers le serveur via la commande `ssh-copy-id <user>@<ip>`. Comme cela est votre première connexion en envoyant les clefs, vous devrez saisir, pour cette fois, votre mot de passe. Une fois la connexion validée, les clefs seront utilisées, et vous n'aurez plus besoin de saisir votre mot de passe pour vous connecter entre ces machines !
+
+> [!WARNING]
+> Trois paramètres valident la connexion : la clef, l'utilisateur et l'IP. Si l'un des trois change, la connexion peut être refusée.
+> Si votre IP ou l'IP du serveur change, vous aurez un avertissement concernant la connexion. Réflechissez à deux fois avant de valider !
