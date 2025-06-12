@@ -29,7 +29,9 @@ Lancez les mises à jour : `sudo apt update` puis `sudo apt upgrade`.
 ### Terminal
 
 Observez votre ligne de commandes.
+
 Celle-ci vous donne déjà quelques informations, car la partie gauche est systématiquement sous la forme : `<username>@<host>:<path><mode>`.
+
 `<username>` est le nom d'utilisateur, `<host>` est le nom d'hôte, `<path>` est le chemin actuellement parcouru et `<mode>` est le mode actuel d'édition (`$` par exemple).
 
 ## Bash
