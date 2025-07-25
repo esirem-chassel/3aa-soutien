@@ -8,6 +8,10 @@ Le langage Python est supposé [être mis en pratique depuis la seconde](https:/
 
 Pour ce TP, nous réalisons d'abord quelques exercices simples avant d'implémenter un "plus petit plus grand", un jeu simpliste.
 
+Ces exercices sont utiles conjugués à l'usage de la [documentation Python](https://docs.python.org/3.13/index.html) ainsi qu'aux bases du développement.
+
+Si vous souhaitez en connaître plus sur Python, le [tutoriel de la documentation](https://docs.python.org/3.13/tutorial/index.html) fait une grande passe sur l'ensemble du langage.
+
 ## Pré-requis
 
 La majorité de cette section est identique (ou similaire) aux précédents TPs.
@@ -55,7 +59,7 @@ Si créer un venv peut être fait une seule fois,
 l'activer est nécessaire à chaque fois qu'on ouvre un nouveau contexte d'exécution,
 donc à chaque nouvelle console / terminal.
 
-## Sytaxe de base
+## Syntaxe de base
 
 ### Main et imports
 
@@ -146,7 +150,7 @@ Une fois vos constats notés, vous pouvez supprimer les deux fichiers.
 
 ### Espaces blancs et structures
 
-Créez un fichier `pppg.py`, dans lequel vous allez placer le code suivant :
+Créez un fichier `even.py`, dans lequel vous allez placer le code suivant :
 
 ```py
 from random import randint
@@ -190,3 +194,131 @@ for i in range(n):
 Modifiez votre code pour lancer la création d'un nombre aléatoire et l'affichage de si pair ou impair 15 fois de suite
 (le nombre aléatoire doit changer à chaque passage de la boucle).
 
+<details>
+    <summary>Proposition de solution</summary>
+    
+```py
+from random import randint
+
+for i in range(15):
+    x = randint(0, 100)
+    print(x)
+    if x % 2 :
+        print("Impair !")
+    else:
+        print("Pair !")
+```
+
+</details>
+
+Vous pouvez supprimer le fichier `even.py`.
+
+### Saisie utilisateur
+
+La fonction `input` permet de demander une saisie utilisateur.
+
+C'est une fonction bloquante : lorsqu'elle est appellée,
+le script est en pause jusqu'à ce que l'utilisateur effectue et valide (avec entrée) une saisie dans la console.
+
+Créez un fichier `saisie.py` avec le contenu suivant :
+
+```py
+x = input("Saisissez un nombre : ")
+x = x + 1
+print(x)
+```
+
+Réalisez le test du fichier. Que constatez-vous ?
+
+> [!important]
+> Python n'autorise pas le mélange de types sans contrôle
+> et requiert que vous réalisiez vous même explicitement
+> des conversions de type.
+> En cas d'erreur de ce type, une exception est levée.
+
+Tentons de forcer le type de x comme étant un entier.
+La fonction `str()` permet de forcer la conversion d'une variable en chaîne de caractères.
+Dans la même idée, la fonction `int()` permet de faire la même chose vers un entier.
+
+Modifiez votre fichier `saisie.py` pour forcer la conversion de `x` en entier.
+Testez votre code, en saisissant un entier, puis en saisissant une chaîne, comme "test". Que constatez-vous ?
+
+> [!important]
+> Les erreurs sont des exceptions.
+> Une exception est un objet spécial,
+> qui peut être "attrapée", afin de gérer les erreurs,
+> via l'usage d'un bloc `try..except`.
+>
+> Tout ce qui est dans un bloc `try` est considéré comme
+> susceptible de jeter une exception.
+> Lorsqu'une exception est jetée, l'exécution du bloc `try` s'interrompt,
+> et le bloc `except` correspondant s'exécute.
+
+
+Exemple :
+
+```py
+    try:
+        x = float(input("Please enter a number: "))
+        print(x) # ne s'exécutera pas si la ligne précédente lance une erreur
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
+```
+
+Ajoutez un contrôle dans votre code, afin de vous assurer que la saisie effectuée par l'utilisateur est bien un nombre,
+et si ça n'est pas le cas, de lui demander à nouveau une saisie (et ainsi de suite).
+
+> [!Tip]
+> Si vous en avez besoin, sachez que les booléens en Python sont `True` et `False`.
+> Attention aux majuscules !
+
+<details>
+    <summary>Proposition de solution</summary>
+    
+```py
+saisieInvalide = True
+while saisieInvalide:
+    try:
+        x = int(input("Saisissez un entier : "))
+        saisieInvalide = False
+    except:
+        print("Saisie invalide")
+        saisieInvalide = True
+```
+
+</details>
+
+Ajoutons l'affichage de l'entier saisi.
+Nous allons utiliser la syntaxe fstring,
+qui consiste à préfixer une chaîne avec "f" afin d'activer le formatage : `print(f'Nombre saisi : {x}.')`.
+
+## Plus petit plus grand
+
+Vous avez désormais tout le nécessaire pour réaliser le plus petit plus grand.
+
+Lorsque le jeu se lance, le programme choisit un nombre aléatoire entre 1 et 1000.
+L'utilisateur démarre avec 10 points.
+A chaque tour, on demande à l'utilisateur de saisir un nombre.
+Si le nombre saisi est invalide, on lui redemande.
+Si le nombre est plus petit ou plus grand,
+l'utilisateur perd un point,
+et le programme affiche si c'est plus grand ou plus petit.
+Si le nombre est égal, l'utilisateur gagne.
+
+### Extension : menu
+
+Implémentez un menu basique en console
+pour donner la possibilité au joueur de relancer une partie, ou de quitter.
+
+### Extension : difficulté
+
+Ajoutez différents modes de difficulté :
+- facile (score démarrant à 10, nombre de 1 à 100)
+- medium (score démarrant à 30, nombre de 1 à 1000)
+- difficile (score démarrant à 80, nombre de 1 à 10000)
+
+Le mode de difficulté doit pouvoir être choisi via le menu.
+
+### Extension : score
+
+Ajoutez la sauvegarde du score dans un fichier `score.txt`.
