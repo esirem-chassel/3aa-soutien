@@ -39,15 +39,23 @@ Une main à 21 points à un autre moment (après tirage), est "simplement" une m
 ### 0.3 Résultats
 
 | Valeur des cartes du joueur (horizontal) et de la banque (vertical) |	Supérieur à 21 | 	Blackjack |	21 |	20 |	19 |	18 |	17 |	Inférieur à 17 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Supérieur à 21 |	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |
 | Blackjack |	Perte |	Égalité |	Perte |	Perte |	Perte |	Perte |	Perte |	Perte |
-| 21 	Perte |	Gain de 3 pour 2 |	Égalité |	Perte |	Perte |	Perte |	Perte |	Perte |
-| 20 	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Égalité |	Perte |	Perte |	Perte |	Perte |
-| 19 	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Égalité |	Perte |	Perte |	Perte |
-| 18 	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Égalité |	Perte |	Perte |
-| 17 	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Égalité |	Perte  |
+| 21 |	Perte |	Gain de 3 pour 2 |	Égalité |	Perte |	Perte |	Perte |	Perte |	Perte |
+| 20 |	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Égalité |	Perte |	Perte |	Perte |	Perte |
+| 19 |	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Égalité |	Perte |	Perte |	Perte |
+| 18 |	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Égalité |	Perte |	Perte |
+| 17 |	Perte |	Gain de 3 pour 2 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Gain de 1 pour 1 |	Égalité |	Perte  |
 
+### 0.4 Git
+
+Vous **devez** utiliser git pour gérer votre projet.
+Vous pouvez utiliser l'outil graphique web,
+un outil graphique comme Github Desktop,
+l'intégration graphique de Git dans VSC ou encore la ligne de commande, à votre choix.
+
+Profitez-en pour vous familiariser avec cet outil, que vous allez utiliser dans ce module mais aussi dans la majorité des modules de programmation du cycle ingénieur.
 
 
 ## 1. Jeu de base
