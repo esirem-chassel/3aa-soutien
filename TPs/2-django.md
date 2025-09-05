@@ -272,7 +272,11 @@ Celui-ci n'est qu'une référence vers un `Statement` existant.
 ### Marqueurs
 
 Nous allons ajouter des marqueurs, des questions supplémentaires ajoutés à chaque relevé.
-Chaque marqueur, ou `Indicator` est représenté sous une question (ou un texte) et un identifiant.
+Chaque marqueur, ou `Indicator` est représenté sous un titre, et une question (ou texte).
+Enfin, pour chaque `Statement`, on doit pouvoir ajouter un `Indicator` en indiquant sa valeur.
+
+Un exemple d'interaction pourrait être un `Indicator` nommé "Objectifs" avec le contenu "Avez-vous rempli vos objectifs de la journée ?".
+Sur chaque `Statement`, on peut alors indiquer, pour l'`Indicator` "Objectifs", une valeur, comme "Presque !" ou "Non, la flemme lmao".
 
 ## Annexes
 
