@@ -90,7 +90,7 @@ Quand un venv est activé, toutes les commandes en rapport avec python seront ob
 
 Créez un venv : `python3 -m venv .venv` __**dans votre dossier utilisateur spécifique**__.
 
-> [!Caution]
+> [!Warning]
 > La commande indiquée peut échouer, car venv n'est pas installé.
 > Si c'est le cas, installez simplement `python3-venv` avant de tester à nouveau.
 
@@ -102,7 +102,7 @@ indiquant que vous êtes dans le contexte d'un venv.
 
 Installons Django !
 
-> [!Danger]
+> [!Caution]
 > Soyez sûr d'être dans votre contexte venv pour toute opération impliquant python.
 
 `pip install django` va installer les éléments nécessaires à Django.
@@ -323,7 +323,7 @@ La procédure est très simple. Lancez l'utilitaire en ligne de commande `python
 
 La création d'une app est lancée via `python manage.py startapp <nom de l'app>`.
 
-> [!Danger]
+> [!Caution]
 > L'app va être créée là où votre ligne de commande est.
 > Donc assurez-vous d'être dans le bon dossier.
 > A noter que Django conseille quelque chose que beaucoup de développeurs ne font pas : de créer des apps HORS des projets.
