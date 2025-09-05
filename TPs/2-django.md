@@ -15,7 +15,7 @@ Utilisez ce TP pour décomplexer l'usage de Linux.
 La touche `Tab` est une alliée !
 L'aide via `man` est très utile !
 
-Les parties X à Y sont des parties devant être réalisées en commun.
+Les parties 1 à 3 sont des parties devant être réalisées en commun.
 Les parties suivantes peuvent être réalisées sur un compte utilisateur et des instances Django à part.
 
 Enfin, ce TP est un avant-goût de votre prochain TP noté.
@@ -74,12 +74,12 @@ Pour chacun·e des membres de votre équipe, créez :
 
 Testez les différentes connexions !
 
-## PIP
+## 2. PIP
 
 Vérifiez, si pip est installé : `pip -v`.
 Si ça n'est pas le cas, installez-le simplement avec aptitude (paquet `python3-pip` ).
 
-## Virtual Env
+## 3. Virtual Env
 
 Maintenant que l'ensemble des outils systèmes nécessaires sont créés,
 nous allons commencer à installer et créer les différents éléments spécifiques au projet Django.
@@ -98,7 +98,7 @@ Une fois le venv créé, activez-le : `source .venv/bin/activate`.
 Vous devriez voir un changement dans votre console,
 indiquant que vous êtes dans le contexte d'un venv.
 
-## Installation Django de base
+## 4. Installation Django de base
 
 Installons Django !
 
@@ -154,7 +154,7 @@ par exemple `http://127.0.0.1:8000/admin/` .
 
 Entrez vos identifiants - vous serez sur le site admin de votre instance Django.
 
-## Personnalisation
+## 5. Personnalisation
 
 ### Bases de Django
 
@@ -262,7 +262,7 @@ Davantage d'informations vous sont aimablement données dans les annexes.
 Ajoutez une tâche crontab pour lancer un export automatisé de votre base toutes les 10 minutes.
 
 
-## Extension
+## 6. Extension
 
 ### Mood actual
 
