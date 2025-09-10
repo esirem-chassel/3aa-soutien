@@ -77,5 +77,8 @@ avec le fichier `/home/qsd/tv.txt` situé sur le poste `192.168.10.22`.
 En utilisant crontab, et après tests,
 synchronisez automatiquement votre base sqlite vers le serveur indiqué par votre enseignant.
 
+## 6. Supplément : plus loin !
 
+En utilisant rsync, rapatriez les autres bases, afin de mettre en commun, via un script de votre cru, les différents enregistrements rainbow afin de créer une gigantesque rainbow table.
 
+Plus d'informations sur Python et SQLite : https://docs.python.org/3/library/sqlite3.html
