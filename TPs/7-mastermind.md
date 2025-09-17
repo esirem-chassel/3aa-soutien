@@ -29,7 +29,9 @@ A cette fin, l'usage d'IA génératives est déconseillé.
 Le jeu se fait en console (saisie et sortie).
 Chaque couleur est codifiée par une lettre parmi
 > Red, Green, Blue, Yellow, Purple, White
+
 ou
+
 > Rouge, Vert, Bleu, Jaune, Mauve, Noir
 
 Le code doit être choisi au hasard.
