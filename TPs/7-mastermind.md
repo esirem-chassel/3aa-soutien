@@ -1,6 +1,6 @@
 # TP7 : Mastermind
 
-Rappels des principes du jeu
+## Rappels des principes du jeu
 
 Un code secret de N éléments (couleurs) est décidé.
 Un nombre de tentatives de décodage par déduction est possible.
@@ -11,7 +11,7 @@ soit à une position correcte soit incorrecte.
 - Correct : bonne couleur au bon emplacement
 - Partiel : bonne couleur au mauvais emplacement
 
-Consignes
+## Consignes
 
 Le projet peut être réalisé en solo ou en équipe de deux maximum.
 Le versionning est obligatoire, sur Github, sous le nom "polytech-dijon-soutien".
@@ -22,9 +22,9 @@ Aucun commit = aucun travail réalisé !
 Vous devez être capable d'expliquer l'intégralité de votre code.
 A cette fin, l'usage d'IA génératives est déconseillé.
 
-Etapes
+## Etapes
 
-MVP
+### MVP
 
 Le jeu se fait en console (saisie et sortie).
 Chaque couleur est codifiée par une lettre parmi
@@ -47,7 +47,7 @@ A chaque essai, un retour est fait sous la forme suivante:
 A la fin, le score est indiqué, celui-ci étant calculé comme `12 - nombre de tentatives`.
 
 
-Modularité
+### Modularité
 
 Il doit être aisé de changer les couleurs disponibles.
 A la fois les couleurs, leur « lettre » mais aussi leur nombre.
@@ -56,7 +56,7 @@ Il doit être aisé de changer le nombre maximal de tentatives.
 Ces changements se font dans le code; mais il doivent pouvoir être réalisés en moins de 5 minutes par un néophyte.
 
 
-Rejouabilité
+### Rejouabilité
 
 Il doit être possible de rejouer autant de fois que souhaité;
 pour cela, prévoir une option « rejouer ».
@@ -81,8 +81,9 @@ Après une partie terminée, on pourra:
 - Remettre à zéro les statistiques
 - Quitter
 
+## Extensions
 
-Mode inversé
+### Mode inversé
 
 Ajouter la possibilité de résolution automatique
 Le joueur humain choisit une combinaison
@@ -92,7 +93,7 @@ Pour permettre une chance, un facteur aléatoire sera rajouté quant au choix d�
 Le score final de chaque partie est alors décidé en soustrayant le score « humain » avec le score « programme »
 
 
-GUI
+### GUI
 
 Utilisez pygame pour ajouter une GUI sur votre programme.
 
