@@ -17,20 +17,24 @@ Vous devrez travailler par branches;
 à vous de voir si vous souhaitez découper les branches par personne,
 micro-fonctionnalité...
 
-## Angry Birds
+## RPG
 
-Lien du dépôt : https://github.com/esirem-chassel/angrybirds
+Lien du dépôt : https://github.com/Manonbe89/Projet-python
 
-## Purrfect Cafe
+## Platformer
 
-Lien du dépôt : https://github.com/esirem-chassel/Purrfect-Cafe
+Lien du dépôt : https://github.com/Maxence-Descharmes/Projet_poly_platformer_maxence_nathan_mamediarra
 
-## Video Games Clicker
+## Gravity
 
-Lien du dépôt : https://github.com/esirem-chassel/Videgames_Clicker
+Lien du dépôt : https://github.com/teoM69/projet-python-S4
 
-## Super Abyssal Bla bla
+## Survivor
 
-Lien du dépôt : https://github.com/esirem-chassel/sapgsrwms
+Lien du dépôt : https://github.com/zeyxow/Projet-survivor-Louis-Eloi
+
+## RTS-like
+
+Lien du dépôt : https://github.com/majvax/wild-woods-2
 
 
