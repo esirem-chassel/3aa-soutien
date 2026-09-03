@@ -1,6 +1,6 @@
 # TP 1 : Linux, shell, SSH
 
-> [!Danger]
+> [!Caution]
 > Ce TP assume que vous êtes capable de prendre des notes et de comprendre ce que vous faites.
 > A l'issue de ce TP, vous devriez être capable, de manière fluide :
 > - d'utiliser bash, de manière basique et suffisante (sans même parler de pipes ou autres notions "médianes")
