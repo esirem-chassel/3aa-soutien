@@ -1,5 +1,14 @@
 # TP 1 : Linux, shell, SSH
 
+> [!Danger]
+> Ce TP assume que vous êtes capable de prendre des notes et de comprendre ce que vous faites.
+> A l'issue de ce TP, vous devriez être capable, de manière fluide :
+> - d'utiliser bash, de manière basique et suffisante (sans même parler de pipes ou autres notions "médianes")
+> - l'usage de commandes comme ls, cd, pwd, sudo
+> - de mettre à jour un système linux en contrôlant le retour
+> - de comprendre et gérer basiquement les droits de dossiers et fichiers
+> - d'utiliser SSH de manière basique
+
 ## Installation physique
 
 > [!WARNING]
@@ -105,10 +114,13 @@ Quels sont les droits du dossier `/tmp` ?
 
 ### Edition
 
+> [!Warning]
+> Assurez-vous, pour cette section, d'être dans un dossier où vous avez les droits d'écriture.
+
 Créez un fichier vide via touch : `touch test.txt`.
 Editez ensuite ce fichier via nano : `nano test.txt` afin d'y ajouter une phrase, votre slogan, un principe de vie ou peu importe.
 
-> [!Info]
+> [!Note]
 > Nano est l'éditeur en ligne de commande le plus basique à disposition dans la plupart des installations X.
 > Il fonctionne grâce à des raccourcis claviers basés sur la touche `CTRL` (indiqué sous le caractère `^`) indiqués en base d'interface.
 
@@ -173,6 +185,10 @@ SSH étant un protocole client / serveur, on parle d'un client SSH qui se connec
 Sur le poste faisant office de **serveur** SSH, activez le service. Raspbian rend ça aisé, via un bouton dans le menu de configuration de Raspberry PI, onglet Interfaces. Assurez-vous bien de valider et fermer la fenêtre.
 
 Testez votre connexion SSH depuis votre client (qui peut être un poste de travail sous Windows ou Linux ou encore un autre Raspberry) : `ssh <user>@<ip>` (en remplaçant évidemment `<user>` par le nom d'utilisateur à utiliser et `<ip>` par l'adresse IP du serveur).
+
+> [!Warning]
+> La gestion des clefs SSH, sous Windows, est une purge.
+> Privilégiez les tests entre vos raspberries.
 
 Les fichiers de configuration du démon (la tâche de fond qui garde le serveur "vivant") SSH se situe dans le dossier `/etc/sshd`. En parcourant ces fichiers, modifiez le port d'écoute SSH, par défaut à 22, vers un autre port moins évident (au-dessus du port 2048). Testez votre modification.
 
