@@ -8,7 +8,14 @@ Le site en question réalise de la génération de rainbow tables sur le temps, 
 
 La partie 1 peut être réalisée en commun. Les parties suivantes sont individuelles.
 
+> [!Info]
+> L'usage de l'IA ainsi que la communication avec des personnes hors de votre groupe (et de l'enseignant) sont interdites.
+
 Aucun rendu n'est nécessaire, mais des questions vous seront posées pour vérifier votre avancement, votre compréhension, ainsi que vos compétences travaillées.
+Vous pouvez utiliser vos notes et dépôts précédents; à noter que l'usage d'un dépôt préalablement préparé à l'avance pour cette activité sera considéré comme une tentative de fraude.
+
+> [!Caution]
+> Si une technique ou un élément est utilisé dans votre processus et que vous ne parvenez pas à l'expliquer, cela signifie que vous n'avez pas respecté les consignes !
 
 ## 1. Installation Pi
 
