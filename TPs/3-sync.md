@@ -8,7 +8,7 @@ Le site en question réalise de la génération de rainbow tables sur le temps, 
 
 La partie 1 peut être réalisée en commun. Les parties suivantes sont individuelles.
 
-> [!Info]
+> [!Note]
 > L'usage de l'IA ainsi que la communication avec des personnes hors de votre groupe (et de l'enseignant) sont interdites.
 
 Aucun rendu n'est nécessaire, mais des questions vous seront posées pour vérifier votre avancement, votre compréhension, ainsi que vos compétences travaillées.
