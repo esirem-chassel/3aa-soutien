@@ -17,6 +17,8 @@ Pour les personnes démarrant sur Linux.
 
 ### TP2 : Mise en place d'un système applicatif sur serveur
 
+Un peu de pratique !
+
 ### TP3 : Communication entre systèmes et configuration de base
 
 
