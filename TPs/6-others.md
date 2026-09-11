@@ -29,10 +29,6 @@ Lien du dépôt : https://github.com/Maxence-Descharmes/Projet_poly_platformer_m
 
 Lien du dépôt : https://github.com/teoM69/projet-python-S4
 
-## Survivor
-
-Lien du dépôt : https://github.com/zeyxow/Projet-survivor-Louis-Eloi
-
 ## RTS-like
 
 Lien du dépôt : https://github.com/majvax/wild-woods-2
