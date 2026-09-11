@@ -21,6 +21,7 @@ Un peu de pratique !
 
 ### TP3 : Communication entre systèmes et configuration de base
 
+Avec du rsync !
 
 ## Programmation
 
