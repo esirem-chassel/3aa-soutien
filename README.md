@@ -13,6 +13,8 @@ Différents volets sont abordés au fil du module.
 
 ### TP1 : Manipulations basiques en ligne de commande sur système Linux
 
+Pour les personnes démarrant sur Linux.
+
 ### TP2 : Mise en place d'un système applicatif sur serveur
 
 ### TP3 : Communication entre systèmes et configuration de base
